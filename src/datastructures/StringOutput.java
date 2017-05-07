@@ -3,7 +3,7 @@ package datastructures;
 import java.util.HashSet;
 import java.util.Scanner;
 
-public class xyz {
+public class StringOutput {
 
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);

@@ -16,7 +16,7 @@ public class ValidLoginLogout extends BaseTest{
 			lp.setUserName(INPUT_PATH, "ValidLoginLogout", 1, 0);
 			lp.setPassword(INPUT_PATH, "ValidLoginLogout", 1, 1);
 			lp.clickLogin();
-			lp.verifyTitle(Excel.getCellValue(INPUT_PATH, "ValidLoginLogout", 1, 1));
+			lp.verifyTitle(Excel.getCellValue(INPUT_PATH, "ValidLoginLogout", 1, 2));
 			hp.clickLogout();
 			lp.verifyTitle(Excel.getCellValue(INPUT_PATH, "ValidLoginLogout", 1, 3));
 		}

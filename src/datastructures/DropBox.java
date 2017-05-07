@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import gemeric.AutoConst;
 
-public class abc implements AutoConst {
+public class DropBox implements AutoConst {
 
 	public static void main(String[] args) {
 		System.setProperty(CHROME_KEY, CHROME_VALUE);

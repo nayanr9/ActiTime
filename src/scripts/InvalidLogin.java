@@ -10,7 +10,7 @@ public class InvalidLogin extends BaseTest {
 	public void testLoginInvalid() {
 		LoginPage lp = new LoginPage(driver);
 		lp.setUserName(INPUT_PATH, "ValidLoginLogout", 1, 0);
-		lp.setPassword(INPUT_PATH, "ValidLoginLogout", 1, 1);
+		lp.setPassword(INPUT_PATH, "ValidLoginLogout", 1, 0);
 		lp.clickLogin();
 		lp.errVerification();
 	}
