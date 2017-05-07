@@ -20,14 +20,12 @@ public class BaseTest implements AutoConst {
 	}
 			
 	@AfterMethod
-	public void closeApplication(ITestResult result){
-		
-//		String testName = result.getName();
+	public void closeApplication(ITestResult result){		
+		String testName = result.getName();
 		int status = result.getStatus();
-		Reporter.log("i got executed 1:" + status +"::"+ITestResult.FAILURE, true);
 		if(status==ITestResult.FAILURE){
-			Liberary.getSnapShot(driver, "./snapshot/");
-			Reporter.log("i got executed", true);
+			Liberary.getSnapShot(driver, SNAP_PATH + "" +testName);
+			Reporter.log("i got executed after snapshot.", true);
 		}
 		driver.close();
 		driver.quit();

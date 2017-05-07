@@ -13,15 +13,16 @@ public class Liberary {
 	public static void getSnapShot(WebDriver driver, String folder){
 		Date d = new Date();
 		String now = d.toString().replace(":", "-");
-		System.out.println(now);
+		String path= folder+" "+now+".png";
+		System.out.println(path);
 		TakesScreenshot shot = (TakesScreenshot) driver;
 		File srcFile = shot.getScreenshotAs(OutputType.FILE);
 		System.out.println(now);
-		File destFile = new File(folder+"abc.png");
+		File destFile = new File(path);
 		try{
 			FileUtils.copyFile(srcFile, destFile);			
 		}catch(Exception e){
-			Reporter.log(e.getMessage(),true);
+			Reporter.log("Error taking screenshot.",true);
 		}
 	}
 

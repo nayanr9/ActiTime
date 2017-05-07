@@ -17,7 +17,7 @@ public class BasePage {
 		wait = new WebDriverWait(driver, 10);
 		try{
 			wait.until(ExpectedConditions.titleIs(eTitle));
-			Reporter.log("PASS: Title is matching."+eTitle, true);
+			Reporter.log("PASS: Title is matching. '"+eTitle+"'", true);
 		}
 		catch(Exception e){
 			Reporter.log("FAIL: Title is not matching.", true);
