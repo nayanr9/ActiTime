@@ -21,10 +21,11 @@ public class BaseTest implements AutoConst {
 			
 	@AfterMethod
 	public void closeApplication(ITestResult result){		
-		String testName = result.getName();
+//		String testName = result.getName();
 		int status = result.getStatus();
 		if(status==ITestResult.FAILURE){
-			Liberary.getSnapShot(driver, SNAP_PATH + "" +testName);
+			Liberary.sendEmail();
+//			Liberary.getSnapShot(driver, SNAP_PATH + "" +testName);
 			Reporter.log("i got executed after snapshot.", true);
 		}
 		driver.close();
